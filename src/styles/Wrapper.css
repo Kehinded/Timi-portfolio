@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap");
+:root {
+  --home-primary-color-light: #73f3ed;
+  --home-primary-color-dark: #3aafa9;
+  --home-secondary-color-light: #204755 ;
+  --home-secondary-color-dark: #17252a;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=Wrapper.css.map */

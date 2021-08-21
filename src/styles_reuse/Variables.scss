@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap');
+
+// colors
+:root {
+    // --home-primary-color-light: #ffff00;
+    // --home-primary-color-dark: #ff9100;
+    // --home-secondary-color-light: #0478de;
+    // --home-secondary-color-dark: #022c52;
+    --home-primary-color-light: #73f3ed;
+    --home-primary-color-dark:  #3aafa9;
+    --home-secondary-color-light: #204755 ;
+    --home-secondary-color-dark: #17252a;    
+  }
+
+$primary-color-light: var(--home-primary-color-light);
+$primary-color-dark: var(--home-primary-color-dark);
+
+$secondary-color: #02396b;
+$secondary-color-light: var(--home-secondary-color-light);
+$secondary-color-dark: var(--home-secondary-color-dark);
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #a39494;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// margin #23c38e #022c52 
+$mb-sm: 2rem;
+$mb-md: 4rem;
+$mb-lg: 8rem;
+$mt-sm: 2rem;
+$mt-md: 4rem;
+$mt-lg: 8rem;
+
+// font family
+$text-font: 'Poppins', sans-serif;
+
+// gradient
+$gradient-1:linear-gradient(135deg, var(--home-primary-color-dark) 0%, var(--home-primary-color-dark) 25%,
+var(--home-primary-color-light) 50%, var(--home-secondary-color-light) 80%, var(--home-secondary-color-dark) 100%);
+
+$gradient-2: linear-gradient(135deg, var(--home-secondary-color-dark) 0%, var(--home-secondary-color-dark) 25%,
+var(--home-secondary-color-light) 50%, var(--home-primary-color-light) 80%, var(--home-primary-color-dark) 100%);
+
+$gradient-3:linear-gradient(45deg, var(--home-primary-color-dark) 0%, var(--home-primary-color-dark) 25%,
+var(--home-primary-color-light) 50%, var(--home-secondary-color-light) 80%, var(--home-secondary-color-dark) 100%);
+
+$gradient-4: linear-gradient(45deg, var(--home-secondary-color-dark) 0%, var(--home-secondary-color-dark) 25%,
+var(--home-secondary-color-light) 50%, var(--home-primary-color-light) 80%, var(--home-primary-color-dark) 100%);
+
+$gradient-5:linear-gradient(-45deg, var(--home-primary-color-dark) 0%, var(--home-primary-color-dark) 25%,
+var(--home-primary-color-light) 50%, var(--home-secondary-color-light) 80%, var(--home-secondary-color-dark) 100%);
+
+
+$gradient-6: linear-gradient(360deg, var(--home-secondary-color-dark) 0%, var(--home-secondary-color-dark) 25%,
+var(--home-secondary-color-light) 50%, var(--home-primary-color-light) 80%, var(--home-primary-color-dark) 100%);
+   
+

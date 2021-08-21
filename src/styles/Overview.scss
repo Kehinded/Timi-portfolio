@@ -1,0 +1,74 @@
+
+@import '../styles_reuse/Variables.scss';
+
+.overview{
+    // grid-column: full-start / full-end;
+    margin: 5rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 3rem 3rem 3rem;  
+
+    @media only screen and (max-width: 38em){
+        padding: 0rem 0rem 3rem 0rem;      
+        
+    }
+}
+
+.controls{
+    position: fixed;
+    right: 10rem;
+    top: 10rem;  
+    display: flex;
+    align-items: center;
+    z-index: 10;   
+
+      @media only screen and (max-width: 44em){
+        right: 6rem;
+        top: 13rem;  
+        }
+        @media only screen and (max-width: 30em){
+            right: 3rem;
+            }
+        @media only screen and (max-width: 24em){
+            top: 10rem;
+            right: 2rem;
+            }
+
+    .control-input{
+        display: none;
+
+        &:checked ~ .controls-box .default-control{
+            visibility: hidden;
+        }
+        &:checked ~ .controls-box .change-control{
+            visibility: visible;
+        }
+
+    }
+
+    .controls-box{
+        cursor: pointer;
+        background-color: var(--home-secondary-color-dark);
+    width: 6rem;
+    height: 2.5rem;
+    padding: .1rem .4rem;
+    box-shadow: .1rem .1rem .4rem rgba(#000, .4), -.1rem -.1rem .4rem rgba(#fff, .9);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s;
+
+    &>*{   
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: var(--home-primary-color-dark);
+
+
+        &:last-child{
+            visibility: hidden;
+        }
+    }
+    }
+}   

@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap");
+:root {
+  --home-primary-color-light: #73f3ed;
+  --home-primary-color-dark: #3aafa9;
+  --home-secondary-color-light: #204755 ;
+  --home-secondary-color-dark: #17252a;
+}
+
+.nav-list {
+  text-transform: capitalize;
+  font-weight: bold;
+  list-style: none;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 44em) {
+  .nav-list {
+    flex: 0 0 100%;
+    flex-direction: column;
+    margin-left: 0rem;
+    align-items: flex-start;
+    justify-self: flex-start;
+    margin-top: 1rem;
+    display: none;
+  }
+}
+.nav-list .nav-item {
+  margin-right: 3rem;
+  padding: 1.6rem 1rem;
+  position: relative;
+  cursor: pointer;
+}
+@media only screen and (max-width: 44em) {
+  .nav-list .nav-item {
+    margin-bottom: 1.6rem;
+  }
+}
+.nav-list .nav-item::after {
+  content: "";
+  width: 0%;
+  height: 0.5rem;
+  background-color: var(--home-primary-color-dark);
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  transition: scaleY 0.5s 0.5s, width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+.nav-list .nav-item:hover::after {
+  transform: scaleY(1) translateX(-50%);
+  width: 70%;
+}
+.nav-list .nav-item .nav-link {
+  text-decoration: none;
+  color: var(--home-primary-color-dark);
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 63em) {
+  .nav-list .nav-item .nav-link {
+    font-size: 1.6rem;
+  }
+}
+.nav-list .nav-item .nav-link .nav-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.4rem;
+}
+@media only screen and (max-width: 63em) {
+  .nav-list .nav-item .nav-link .nav-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.8rem;
+  }
+}
+.nav-list .active::after {
+  content: "";
+  width: 70%;
+  height: 0.5rem;
+  background-color: var(--home-primary-color-dark);
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=Navigation.css.map */

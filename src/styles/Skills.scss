@@ -1,0 +1,35 @@
+@import '../styles_reuse/Variables.scss';
+
+.skill-box{
+    margin: 2rem 0rem 1rem 0rem ;
+
+    h3{
+        font-size: 2rem;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-gap: 2rem;
+
+        .skill{
+            background-color: var(--home-primary-color-dark);  
+            border-radius: 4rem;
+            display: flex;                       
+            align-items: center;  
+            justify-content: center;
+            padding: .5rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: #ffffff;
+            transition: all .3s;
+            box-shadow:  -.1rem -.1rem .6rem rgba(#fff, .9),  .1rem .1rem .4rem rgba(#000, .4); 
+
+            &:hover{
+                background-image: $gradient-4;
+            }  
+        }      
+    }
+}

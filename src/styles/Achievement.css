@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap");
+:root {
+  --home-primary-color-light: #73f3ed;
+  --home-primary-color-dark: #3aafa9;
+  --home-secondary-color-light: #204755 ;
+  --home-secondary-color-dark: #17252a;
+}
+
+.achievement-box {
+  margin: 5rem 0rem 5rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 23rem));
+  grid-gap: 5rem;
+  justify-content: center;
+}
+@media only screen and (max-width: 38em) {
+  .achievement-box {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));
+    grid-row-gap: 4rem;
+  }
+}
+.achievement-box:hover > *:not(:hover) {
+  transform: scale(0.9);
+}
+.achievement-box:hover > *:hover {
+  transform: scale(1.06);
+  position: relative;
+}
+.achievement-box .box {
+  background-color: transparent;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  color: var(--home-secondary-color-dark);
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2));
+}
+@media only screen and (max-width: 38em) {
+  .achievement-box .box {
+    height: 15rem;
+  }
+}
+.achievement-box .box:nth-child(odd):not(:first-child)::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-45deg, var(--home-primary-color-dark) 0%, var(--home-primary-color-dark) 25%, var(--home-primary-color-light) 50%, var(--home-secondary-color-light) 80%, var(--home-secondary-color-dark) 100%);
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+}
+.achievement-box .box:nth-child(odd):not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: 0%;
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  background-color: var(--home-primary-color-light);
+  -webkit-clip-path: polygon(0% 0%, 20% 0%, 100% 20%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 20% 0%, 100% 20%, 100% 100%, 0% 100%);
+  border-top-left-radius: 20%;
+}
+.achievement-box .box:nth-child(even)::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, var(--home-primary-color-dark) 0%, var(--home-primary-color-dark) 25%, var(--home-primary-color-light) 50%, var(--home-secondary-color-light) 80%, var(--home-secondary-color-dark) 100%);
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+.achievement-box .box:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  background-color: var(--home-primary-color-light);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 0% 80%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 0% 80%);
+  border-bottom-right-radius: 25%;
+}
+.achievement-box .box:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, var(--home-primary-color-dark) 0%, var(--home-primary-color-dark) 25%, var(--home-primary-color-light) 50%, var(--home-secondary-color-light) 80%, var(--home-secondary-color-dark) 100%);
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+.achievement-box .box:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 0%;
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  background-color: var(--home-primary-color-light);
+  -webkit-clip-path: polygon(0% 20%, 80% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 20%, 80% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-top-right-radius: 20%;
+}
+.achievement-box .box .icon {
+  color: var(--home-secondary-color-dark);
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation: upanddown 2s cubic-bezier(1, 1, 1, 1) infinite backwards;
+          animation: upanddown 2s cubic-bezier(1, 1, 1, 1) infinite backwards;
+  position: relative;
+  z-index: 3;
+}
+@media only screen and (max-width: 38em) {
+  .achievement-box .box .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.achievement-box .box .icon-2 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.achievement-box .box .icon-3 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.achievement-box .box h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+  position: relative;
+  z-index: 3;
+}
+@media only screen and (max-width: 38em) {
+  .achievement-box .box h2 {
+    font-size: 2rem;
+  }
+}
+.achievement-box .box .text {
+  text-transform: capitalize;
+  position: relative;
+  font-weight: bold;
+  z-index: 3;
+  color: #ffffff;
+}
+@media only screen and (max-width: 38em) {
+  .achievement-box .box .text {
+    font-size: 1.3rem;
+  }
+}
+.achievement-box .box-2 {
+  margin-top: 0.2rem;
+}
+.achievement-box .box-3 {
+  margin-top: 0.4rem;
+}
+@media only screen and (max-width: 21em) {
+  .achievement-box .box-3 {
+    margin-top: 4rem;
+  }
+}
+
+@-webkit-keyframes upanddown {
+  0% {
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-15%);
+  }
+}
+
+@keyframes upanddown {
+  0% {
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-15%);
+  }
+}/*# sourceMappingURL=Achievement.css.map */

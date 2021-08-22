@@ -23,7 +23,7 @@ const Achievement = () => {
                 </div>
                 <div data-aos = 'fade-up' className="box box-2">  
                 <FaBezierCurve className= 'icon icon-2'/>
-                <h2>10</h2>
+                <h2>10+</h2>    
                 <p className="text">completed projects</p>
                 </div>
                 <div data-aos = 'fade-left' className="box box-3">

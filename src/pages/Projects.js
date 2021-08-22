@@ -7,6 +7,8 @@ import BudgetyImg from '../images/budgety-app.png'
 import NexterImg from '../images/nexter-home-site.png'
 import HotelImg from '../images/hotel-site.png'
 import MeetUp from '../images/details-react-app.png'
+import PortfolioImg from '../images/portfolio.png'
+import ResumeImg from '../images/resume.png'
 
 const Projects = () => {
     return (
@@ -44,8 +46,19 @@ const Projects = () => {
             text = 'online app where you can input, save, remove details or contacts. Built with react .'
             link = ' https://kehinded.github.io/react-meet-up/'
             />
+             <ProjectViewRight 
+            image = {PortfolioImg}
+            title = 'My portfolio'
+            text = 'This current website you are navigating. Built with react and sass with Api actions at the contact and like box, you can get my contacts from the footer.'
+            link = 'https://timi-portfolio.netlify.app/'
+            />
+            <ProjectViewLeft 
+            image = {ResumeImg}
+            title = 'My resume'
+            text = 'My online resume. Built with react and sass.'
+            link = 'https://kehinded.github.io/hngi8-task-cv/'
+            />
             </div>
-           
         </div>
     )
 }

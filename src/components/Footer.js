@@ -44,7 +44,7 @@ const Footer = () => {
             </ul>
             <div className="copy-right" >
                 <p className="text-1">copyright&copy;2021</p>
-                <p className="text-2">ayeni kehinde timilehin</p>
+                <p className="text-2">ayeni kehinde timilehin</p>   
             </div>
         </footer>
     )

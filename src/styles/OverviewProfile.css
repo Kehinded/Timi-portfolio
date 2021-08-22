@@ -291,6 +291,10 @@
   align-items: center;
   transition: all 1s;
 }
+.right-box .img-box .like-box .text {
+  color: #ffffff;
+  font-weight: bold;
+}
 @media only screen and (max-width: 44em) {
   .right-box .img-box .like-box {
     top: -5rem;

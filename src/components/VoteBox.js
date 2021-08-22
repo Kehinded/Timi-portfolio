@@ -6,10 +6,13 @@ import {FaThumbsUp} from 'react-icons/fa'
 const VoteBox = () => {
     const [voteNo, setVoteNo] = useState('')
     const [onCheck, setOnCheck]  = useState(false)
+    const [showVote, setShowVote] = useState(false)
+
     useEffect(() => {
         const getLikeNo = async () => {
              const likeNo = await fetchLikeNo()
              setVoteNo(likeNo)
+            setShowVote(true)
             //  console.log(likeNo);
         }
         getLikeNo();
@@ -50,13 +53,12 @@ const VoteBox = () => {
             return res.json()
         })
         .then((data) => {
-            // console.log(data);
             setVoteNo(data)
         })
     }
     return (
         <>
-             <div className="like-box">
+        {showVote ?  <div className="like-box">
                <div className="like-control-box">
                <input type="checkbox" id='likes' className="like-input" />
             <label htmlFor="likes" className="like-label" onClick={addLike}>
@@ -67,7 +69,7 @@ const VoteBox = () => {
                 <p><span className="like-no">{voteNo}</span><sub>likes</sub></p>
                 <p>View my projects and Like</p>
             </div>
-            </div>
+            </div> : <div className="like-box"><p className="text">Loading likes ...</p></div>}
         </>
     )
 }

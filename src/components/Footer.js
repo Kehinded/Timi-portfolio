@@ -37,7 +37,7 @@ const Footer = () => {
                 <li className="item" data-aos = 'fade-up'><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ayenikehinded@gmail.com" className="link"><FaGooglePlusSquare className= 'icon' /><div className="info">connect on google</div></a></li>
                 <li className="item" data-aos = 'fade-up'><span>{copySuccess}</span><a href="http"  className="link" onClick={(e) => {
                     e.preventDefault();
-                    copyToClipBoard('08162631944')}}><FaPhoneAlt className= 'icon' /><div className="info">click to copy number</div></a></li>
+                    copyToClipBoard('+2348162631944')}}><FaPhoneAlt className= 'icon' /><div className="info">click to copy number</div></a></li>
                 <li className="item" data-aos = 'fade-up'><a href="https://github.com/Kehinded" className="link">< FaGithub className= 'icon' /><div className="info">connect on github</div></a></li>
                 <li className="item" data-aos = 'fade-up'><a href="https://www.linkedin.com/in/kehinde-ayeni-4a2660196/" className="link"><FaLinkedin className= 'icon' /><div className="info">connect on linkedin</div></a></li>
                 <li className="item" data-aos = 'fade-up'><a href="https://twitter.com/KEHINDED_?s=09" className="link"><FaTwitter className= 'icon' /><div className="info">connect on twitter</div></a></li>

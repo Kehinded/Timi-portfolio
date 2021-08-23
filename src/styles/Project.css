@@ -124,10 +124,16 @@
     line-height: unset;
   }
 }
-.project-section .project_view-left .info-view .info-link {
-  background-color: var(--home-primary-color-dark);
-  align-self: flex-start;
+.project-section .project_view-left .info-view .link-box {
+  display: flex;
+  align-items: center;
   margin-top: auto;
+}
+.project-section .project_view-left .info-view .link-box > *:last-child {
+  margin-left: auto;
+}
+.project-section .project_view-left .info-view .link-box .info-link {
+  background-color: var(--home-primary-color-dark);
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -138,15 +144,25 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 34em) {
+  .project-section .project_view-left .info-view .link-box .info-link .btn {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 24em) {
+  .project-section .project_view-left .info-view .link-box .info-link .btn {
+    display: none;
+  }
+}
 @media only screen and (max-width: 38em) {
-  .project-section .project_view-left .info-view .info-link {
+  .project-section .project_view-left .info-view .link-box .info-link {
     padding: 0.7rem;
   }
 }
-.project-section .project_view-left .info-view .info-link:hover {
+.project-section .project_view-left .info-view .link-box .info-link:hover {
   transform: translateX(-0.3rem) translateY(-0.2rem);
 }
-.project-section .project_view-left .info-view .info-link .btn {
+.project-section .project_view-left .info-view .link-box .info-link .btn {
   background-color: transparent;
   border: none;
   outline: none;
@@ -156,16 +172,20 @@
   cursor: pointer;
 }
 @media only screen and (max-width: 38em) {
-  .project-section .project_view-left .info-view .info-link .btn {
+  .project-section .project_view-left .info-view .link-box .info-link .btn {
     font-weight: unset;
-    font-style: 1.2rem;
   }
 }
-.project-section .project_view-left .info-view .info-link .info-icon {
+.project-section .project_view-left .info-view .link-box .info-link .info-icon {
   margin-right: 1rem;
   order: -1;
   transform: scale(1.3);
   cursor: pointer;
+}
+@media only screen and (max-width: 24em) {
+  .project-section .project_view-left .info-view .link-box .info-link .info-icon {
+    margin-right: 0rem;
+  }
 }
 .project-section .project_view-right {
   display: flex;
@@ -270,10 +290,18 @@
     line-height: unset;
   }
 }
-.project-section .project_view-right .info-view .info-link {
+.project-section .project_view-right .info-view .link-box {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+.project-section .project_view-right .info-view .link-box > *:last-child {
+  order: -1;
+  margin-right: auto;
+}
+.project-section .project_view-right .info-view .link-box .info-link {
   background-color: var(--home-primary-color-dark);
   align-self: flex-end;
-  margin-top: auto;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -284,15 +312,25 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 34em) {
+  .project-section .project_view-right .info-view .link-box .info-link .btn {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 24em) {
+  .project-section .project_view-right .info-view .link-box .info-link .btn {
+    display: none;
+  }
+}
 @media only screen and (max-width: 38em) {
-  .project-section .project_view-right .info-view .info-link {
+  .project-section .project_view-right .info-view .link-box .info-link {
     padding: 0.7rem;
   }
 }
-.project-section .project_view-right .info-view .info-link:hover {
+.project-section .project_view-right .info-view .link-box .info-link:hover {
   transform: translateX(0.3rem) translateY(-0.2rem);
 }
-.project-section .project_view-right .info-view .info-link .btn {
+.project-section .project_view-right .info-view .link-box .info-link .btn {
   background-color: transparent;
   border: none;
   outline: none;
@@ -301,10 +339,15 @@
   font-weight: bold;
   cursor: pointer;
 }
-.project-section .project_view-right .info-view .info-link .info-icon {
+.project-section .project_view-right .info-view .link-box .info-link .info-icon {
   margin-left: 1rem;
   transform: scale(1.3);
   cursor: pointer;
+}
+@media only screen and (max-width: 24em) {
+  .project-section .project_view-right .info-view .link-box .info-link .info-icon {
+    margin-left: 0rem;
+  }
 }
 .project-section .project-all-btn {
   align-self: center;

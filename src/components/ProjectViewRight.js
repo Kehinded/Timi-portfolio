@@ -1,7 +1,7 @@
 import '../styles/Project.css'
-import {FaLongArrowAltRight} from 'react-icons/fa'
+import {FaLongArrowAltRight, FaGithub} from 'react-icons/fa'
 
-const ProjectViewRight = ({image, title, text, link}) => {
+const ProjectViewRight = ({image, title, text, link, github}) => {
     return (
         <div className= 'project_view-right'>
             <div className="img-view">
@@ -12,7 +12,10 @@ const ProjectViewRight = ({image, title, text, link}) => {
            <div className="info-view">
                <h3 className="title">{title}</h3>
                <p className="text">{text}</p>
-               <a target= '_blank' rel="noreferrer" href={link} className="info-link"><button className="btn">go to site</button><FaLongArrowAltRight className= 'info-icon' /></a>
+              <div className="link-box">
+              <a target= '_blank' rel="noreferrer" href={link} className="info-link"><button className="btn">go to site</button><FaLongArrowAltRight className= 'info-icon' /></a>
+              <a target= '_blank' rel="noreferrer" href={github} className="info-link"><button className="btn">go to github repo</button><FaGithub className= 'info-icon' /></a>
+              </div>
            </div>
            {/* end of info view */}
         </div>

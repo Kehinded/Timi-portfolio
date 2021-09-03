@@ -1,20 +1,18 @@
 
 import '../styles/Skills.css'
 
+const techSkills = ['html', 'css', 'bootstrap', 'javascript', 'sass', 'tailwind', 'webpack',
+                    'react js', 'next js', 'vue js', 'git']
+
 const Skills = () => {
     return (
         <div className="skill-box">
         <h3 className= 'title'>skills</h3>
         <div className="skills">
-            <div className="skill">HTML</div>
-            <div className="skill">CSS</div>
-            <div className="skill">BOOTSTRAP</div>
-            <div className="skill">JAVASCRIPT</div>
-            <div className="skill">SASS</div>
-            <div className="skill">WEBPACK</div>
-            <div className="skill">React</div>
-            <div className="skill">Vue Js</div>
-            <div className="skill">Github</div>
+            {
+            techSkills.map((skill, index) => <div key={index} style={{textTransform: "uppercase"}} className="skill">{skill}</div>)
+            }
+        
         </div>
     </div>
     )

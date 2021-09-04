@@ -1,10 +1,10 @@
 import userImg from '../images/kehinded_1'
 import '../styles/OverviewProfile.css'
 import VoteBox from './VoteBox'
-// import { useState, useEffect } from 'react'
 import Socials from './Socials'
 import Skills from './Skills'
 import TextAnimation from './TextAnimation'
+import  MyCv from "../store/timi-cv.docx"
 
 
 const OverviewProfile = () => {
@@ -23,7 +23,12 @@ const OverviewProfile = () => {
                <Skills />
                 {/* start of contact */}
                 <div className="contact-box">
-                    <h3 className="title"><span>get in contact</span><span>from socials</span></h3>
+                   <div className="title-box" style={{alignSelf: "flex-start", display: "flex", alignItems: "center", flexWrap: "wrap"}}>
+                  <a href={MyCv} download="Timi_cv.docx" style={{color: "#ffffff", textDecoration: "none", textTransform: "capitalize", fontWeight: "bold", padding: ".7rem 1.5rem", marginRight: "2rem"}} className="title">
+                  <span>download resume</span><span style={{textAlign: "center"}}>hire timi now ❤️</span>
+                  </a>
+                   <h3 className="title"><span>get in contact</span><span>from socials</span></h3>
+                   </div>
                     <div className="social-box">
                        <Socials />
                     </div>

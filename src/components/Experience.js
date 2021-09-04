@@ -48,8 +48,7 @@ const Experience = () => {
         companyName: "HNGi8",
         date: "july 2021 - present",
         tasks: ['Colaborated with designers, back-end and front-end developers to build and released a responsive website',
-                'Maintaining and organizing workflow using project management tool like Github.',
-                'kahsas knngdsshs jjhns gsjhabs jahdn ldrjlffkh gdjdbeg tgdd'
+                'Maintaining and organizing workflow using project management tool like Github.'
      ]
         })
     }

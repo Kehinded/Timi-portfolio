@@ -4,13 +4,13 @@ import styled, { keyframes } from 'styled-components'
 
 export default function TextAnimation () {
     
-    const textOneArray = "Hello! i'm Timi, Welcome to my portifolio ❤️.".split(" ")
-    const textTwoArray = "I'm a freelance software engineer specialized in front-end.".split(" ")
-    const textThreeArray = "Love to build easy-to-use interface between the user and the product.".split(" ")
-    const textFourArray = "Bringing a concept to life with HTML, CSS, and JavaScript.".split(" ")
-    const textFiveArray = "Build website that can easily perform bulk HubSpot API actions.".split(" ")
-    const textSixArray = "I like Staying up-to-date on any new development trends.".split(" ")
-    const textSevenArray = "Prioritizing user experience is my top responsibility.".split(" ")
+    const textOneArray = "Hello! 👋 i'm Timi, Welcome to my portifolio. ❤️".split(" ")
+    const textTwoArray = "I'm a freelance software engineer specialized in front-end. ⭐⭐⭐⭐⭐".split(" ")
+    const textThreeArray = "Love to build easy-to-use interface between the user and the product. 🧑‍💻".split(" ")
+    const textFourArray = "Bringing a concept to life with HTML, CSS, and JavaScript. 🚀".split(" ")
+    const textFiveArray = "Build website that can easily perform bulk HubSpot API actions. 🐙".split(" ")
+    const textSixArray = "I like Staying up-to-date on any new development trends. 🔍".split(" ")
+    const textSevenArray = "Prioritizing user experience is my top responsibility. 👏👍".split(" ")
     const [items, setItems] = useState(textOneArray)
     const [count, setCount] = useState(0)
     const [play, setPlay] = useState(false)
@@ -108,16 +108,20 @@ span:nth-child(6){
     animation-delay: .6s;
 }
 span:nth-child(7){
-    animation-delay: .7s;
+    animation-delay: .5s;
 }
 span:nth-child(8){
-    animation-delay: .8s;
+    animation-delay: .4s;
 }
 span:nth-child(9){
-    animation-delay: .9s;
+    animation-delay: .3s;
 }
 span:nth-child(10){
-    animation-delay: 1s;
+    animation-delay: .2s;
+}
+
+span:nth-child(11){
+    animation-delay: .1s;
 }
 `
 

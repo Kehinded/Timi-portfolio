@@ -7,7 +7,7 @@ const techSkills = ['html', 'css', 'bootstrap', 'javascript', 'sass', 'tailwind'
 const Skills = () => {
     return (
         <div className="skill-box">
-        <h3 className= 'title'>skills</h3>
+        <h3 className= 'title'>technical skills</h3>
         <div className="skills">
             {
             techSkills.map((skill, index) => <div key={index} style={{textTransform: "uppercase"}} className="skill">{skill}</div>)

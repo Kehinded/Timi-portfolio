@@ -90,7 +90,7 @@ const projects = [
         image : `${PortfolioImg}`,
         title : 'My portfolio',
         text : 'This current website you are navigating. Built with react and sass with Api actions at the contact and like box, you can get my contacts from the footer.',
-        link : 'https://timi-portfolio.netlify.app/',
+        link : 'https://developer-timi-portfolio.netlify.app',
         github : 'https://github.com/Kehinded/Timi-portfolio.git'
     },
     {

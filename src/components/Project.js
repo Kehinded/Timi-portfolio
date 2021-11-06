@@ -22,7 +22,7 @@ const projects = [
     image: `${hospital_home}`,
     title: "Akot Hospital",
     text: "An online hospital where patient can book an appointent with a clinical worker and also where medical staffs can access their patients and get daily schedules, built this with hthml, css and javascript.",
-    link: "https://friendly-einstein-2d6ee0.netlify.app",
+    link: "https://akot-hospital.netlify.app",
     github: "https://github.com/Kehinded/AKOT-HOSPITAL.git",
   },
   {

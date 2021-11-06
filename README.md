@@ -1,4 +1,5 @@
-checkout website view with this link =>  https://timi-portfolio.netlify.app/
+checkout website view with this link =>  https://developer-timi-portfolio.netlify.app
+
 
 # Getting Started with Create React App
 

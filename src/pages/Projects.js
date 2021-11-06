@@ -13,6 +13,7 @@ import HotelImg from '../images/hotel-site.png'
 import MeetUp from '../images/details-react-app.png'
 import PortfolioImg from '../images/portfolio.png'
 import ResumeImg from '../images/resume.png'
+import EbikeImg from "../images/EBikeone.jpg"   
 
 const projects = [
     {
@@ -21,6 +22,13 @@ const projects = [
             title: 'homeTeach',
             link: 'https://staging-hometeach80.netlify.app/index.html',
             github: 'https://github.com/zuri-training/HomeTeach-fe-pjt-80.git'
+    },
+    {
+        image: `${EbikeImg}`,
+        text: "An ecommerce landing page to display eBikes products, built with with and sass",
+        title: "eBike",
+        link: "https://ebike-kehinded.netlify.app/",
+        github: "https://github.com/Kehinded/eBike.git"
     },
     {
         image: `${hospital_home}`,

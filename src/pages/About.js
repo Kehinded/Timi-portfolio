@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import '../styles/About.css'
-import UserImage from '../images/kehinded.png'
+import UserImage from '../images/kehinded.png'      
 import Skills from '../components/Skills'
 import MultiSkillImg from '../images/multi-skill.png'
 import  VersatileImg from '../images/versatile.png'

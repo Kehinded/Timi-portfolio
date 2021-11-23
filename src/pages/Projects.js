@@ -13,9 +13,17 @@ import HotelImg from '../images/hotel-site.png'
 import MeetUp from '../images/details-react-app.png'
 import PortfolioImg from '../images/portfolio.png'
 import ResumeImg from '../images/resume.png'
-import EbikeImg from "../images/EBikeone.jpg"   
+import EbikeImg from "../images/EBikeone.jpg"  
+import v_schoolImg from "../images/visual-school.png" 
 
 const projects = [
+    {
+    image: `${v_schoolImg}`,
+    text: "Worked with a backend developer to build this personal project, a school management website where ongoing session, terms, users activities can be managed online. Built with reac, to login as an admin an check out the functionalities use (email:admin@gmail.com, password:password).",
+    title: "V-school",
+    link: "https://akot-v-school.netlify.app",
+    github: "https://github.com/Kehinded/V-SCHOOL.git",
+  },
     {
         image: `${HomeTeach}`,    
             text: 'Worked in a team with backend developer and designers to build a  site that help teachers to render their services effectively and also allows student to sign up and choose select courses from the list of curated top performing best reviewed best instructors, built this with hthml, css and javascript.', 

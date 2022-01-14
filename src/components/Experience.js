@@ -14,8 +14,11 @@ const Experience = () => {
         });
     }, []) 
 
-    const [zuriActive, setZuriActive] = useState(true)
-    const [finTechActive, setFinTechActive] = useState(false)
+    const [workActive, setWorkActive] = useState({
+        zuri: true,
+        hngi8: false,
+        elatech: false
+    })
     const [details, setDetails] = useState({
         jobTitle: "front-end intern",
         companyName: "zuri team",
@@ -28,8 +31,9 @@ const Experience = () => {
 
     const checkActive = (text) => {
        if(text === 'zuri'){
-           setZuriActive(true);
-           setFinTechActive(false);
+           setWorkActive((prev) => {
+               return{...prev, zuri: true, hngi8: false, elatech: false}
+           });
            setDetails({
             jobTitle: "front-end intern",
             companyName: "zuri team",
@@ -41,12 +45,26 @@ const Experience = () => {
            })
        }
        if(text === 'HNGi8'){
-        setZuriActive(false);
-        setFinTechActive(true);
+        setWorkActive((prev) => {
+            return{...prev, zuri: false, hngi8: true, elatech: false}
+        });
         setDetails({
             jobTitle: "front-end Intern",
         companyName: "HNGi8",
-        date: "july 2021 - present",
+        date: "july 2021 - august 2021",
+        tasks: ['Colaborated with designers, back-end and front-end developers to build and released a responsive website',
+                'Maintaining and organizing workflow using project management tool like Github.'
+     ]
+        })
+    }
+    if(text === 'elatech'){
+        setWorkActive((prev) => {
+            return{...prev, zuri: false, hngi8: false, elatech: true}
+        });
+        setDetails({
+            jobTitle: "front-end developer",
+        companyName: "elatech",
+        date: "january 2022 - present",
         tasks: ['Colaborated with designers, back-end and front-end developers to build and released a responsive website',
                 'Maintaining and organizing workflow using project management tool like Github.'
      ]
@@ -60,8 +78,9 @@ const Experience = () => {
             <div className="info-box">
             <div className="title-info-box">
                 <ul className="title-list" >
-                    <li className={`title-item ${zuriActive && 'active'}`} onClick={ () => {checkActive('zuri')}} >zuri team </li>
-                    <li className={`title-item ${finTechActive && 'active'}`} onClick={ () => {checkActive('HNGi8')}}>HNGi8</li>
+                    <li className={`title-item ${workActive.zuri && 'active'}`} onClick={ () => {checkActive('zuri')}} >zuri team </li>
+                    <li className={`title-item ${workActive.hngi8 && 'active'}`} onClick={ () => {checkActive('HNGi8')}}>HNGi8</li>
+                    <li className={`title-item ${workActive.elatech && 'active'}`} onClick={ () => {checkActive('elatech')}}>elatech</li>
                 </ul>
             </div>
             {/* end of title box */}

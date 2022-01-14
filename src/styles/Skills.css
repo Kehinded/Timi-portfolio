@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap");
 :root {
   --home-primary-color-light: #73f3ed;
-  --home-primary-color-dark: #3aafa9;
+  --home-primary-color-dark:  #3aafa9;
   --home-secondary-color-light: #204755 ;
   --home-secondary-color-dark: #17252a;
 }
@@ -9,29 +9,44 @@
 .skill-box {
   margin: 2rem 0rem 1rem 0rem;
 }
+
 .skill-box h3 {
   font-size: 2rem;
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
+
 .skill-box .skills {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 2rem;
 }
+
 .skill-box .skills .skill {
   background-color: var(--home-primary-color-dark);
   border-radius: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem;
   font-size: 1.3rem;
   cursor: pointer;
   color: #ffffff;
-  transition: all 0.3s;
-  box-shadow: -0.1rem -0.1rem 0.6rem rgba(255, 255, 255, 0.9), 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-box-shadow: -0.1rem -0.1rem 0.6rem rgba(255, 255, 255, 0.9), 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
+          box-shadow: -0.1rem -0.1rem 0.6rem rgba(255, 255, 255, 0.9), 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
 }
+
 .skill-box .skills .skill:hover {
   background-image: linear-gradient(45deg, var(--home-secondary-color-dark) 0%, var(--home-secondary-color-dark) 25%, var(--home-secondary-color-light) 50%, var(--home-primary-color-light) 80%, var(--home-primary-color-dark) 100%);
-}/*# sourceMappingURL=Skills.css.map */
+}
+/*# sourceMappingURL=Skills.css.map */

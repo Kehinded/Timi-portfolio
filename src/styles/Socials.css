@@ -1,59 +1,89 @@
 .socials {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 2rem;
   justify-items: center;
 }
+
 .socials a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   text-decoration: none;
 }
+
 .socials a .icon:hover ~ .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .socials a .img:hover ~ .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .socials a .info {
   position: absolute;
   bottom: -120%;
   left: 50%;
   z-index: 10;
-  padding: 0.4rem;
-  transform: translateX(-50%);
+  padding: .4rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.1rem;
   font-weight: bold;
   background-color: #ffffff;
   width: 15rem;
-  box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
   display: none;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
+
 .socials > * > * {
   width: 3rem;
   height: 3rem;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
+
 .socials > * > *:hover {
-  transform: scale(1.28);
+  -webkit-transform: scale(1.28);
+          transform: scale(1.28);
 }
+
 .socials > *:first-child {
   color: #3c5e9c;
 }
+
 .socials > *:nth-child(2) {
   color: #f53030;
 }
+
 .socials > *:nth-child(3) {
   color: rgba(216, 31, 68, 0.904);
 }
+
 .socials > *:nth-child(4) {
   color: royalblue;
 }
+
 .socials > *:last-child {
   color: #000;
 }
@@ -61,5 +91,7 @@
 .polywork {
   -webkit-clip-path: polygon(10% 10%, 90% 10%, 90% 80%, 10% 80%);
           clip-path: polygon(10% 10%, 90% 10%, 90% 80%, 10% 80%);
-  transform: scale(1.25);
-}/*# sourceMappingURL=Socials.css.map */
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+/*# sourceMappingURL=Socials.css.map */

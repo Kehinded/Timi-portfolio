@@ -1,54 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap");
 :root {
   --home-primary-color-light: #73f3ed;
-  --home-primary-color-dark: #3aafa9;
+  --home-primary-color-dark:  #3aafa9;
   --home-secondary-color-light: #204755 ;
   --home-secondary-color-dark: #17252a;
 }
 
 .achievement-box {
   margin: 5rem 0rem 5rem 0rem;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23rem, 23rem));
+  -ms-grid-columns: (minmax(23rem, 23rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(23rem, 23rem));
   grid-gap: 5rem;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 @media only screen and (max-width: 38em) {
   .achievement-box {
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));
+    -ms-grid-columns: (minmax(15rem, 15rem))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));
     grid-row-gap: 4rem;
   }
 }
+
 .achievement-box:hover > *:not(:hover) {
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
+
 .achievement-box:hover > *:hover {
-  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
   position: relative;
 }
+
 .achievement-box .box {
   background-color: transparent;
   height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 1rem;
   color: var(--home-secondary-color-dark);
   cursor: pointer;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   border-radius: 1rem;
   position: relative;
   z-index: 3;
-  filter: drop-shadow(0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.2));
 }
+
 @media only screen and (max-width: 38em) {
   .achievement-box .box {
     height: 15rem;
   }
 }
+
 .achievement-box .box:nth-child(odd):not(:first-child)::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0%;
   left: 0%;
@@ -59,8 +83,9 @@
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
 }
+
 .achievement-box .box:nth-child(odd):not(:first-child)::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -20%;
   right: 0%;
@@ -72,8 +97,9 @@
           clip-path: polygon(0% 0%, 20% 0%, 100% 20%, 100% 100%, 0% 100%);
   border-top-left-radius: 20%;
 }
+
 .achievement-box .box:nth-child(even)::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0%;
   left: 0%;
@@ -84,8 +110,9 @@
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
+
 .achievement-box .box:nth-child(even)::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 20%;
   left: 0%;
@@ -97,8 +124,9 @@
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 0% 80%);
   border-bottom-right-radius: 25%;
 }
+
 .achievement-box .box:nth-child(1)::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0%;
   left: 0%;
@@ -109,8 +137,9 @@
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
+
 .achievement-box .box:nth-child(1)::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -20%;
   left: 0%;
@@ -122,6 +151,7 @@
           clip-path: polygon(0% 20%, 80% 0%, 100% 0%, 100% 100%, 0% 100%);
   border-top-right-radius: 20%;
 }
+
 .achievement-box .box .icon {
   color: var(--home-secondary-color-dark);
   width: 5rem;
@@ -131,31 +161,37 @@
   position: relative;
   z-index: 3;
 }
+
 @media only screen and (max-width: 38em) {
   .achievement-box .box .icon {
     width: 2.5rem;
     height: 2.5rem;
   }
 }
+
 .achievement-box .box .icon-2 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
+
 .achievement-box .box .icon-3 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
+
 .achievement-box .box h2 {
   font-size: 3rem;
   font-weight: bolder;
   position: relative;
   z-index: 3;
 }
+
 @media only screen and (max-width: 38em) {
   .achievement-box .box h2 {
     font-size: 2rem;
   }
 }
+
 .achievement-box .box .text {
   text-transform: capitalize;
   position: relative;
@@ -163,17 +199,21 @@
   z-index: 3;
   color: #ffffff;
 }
+
 @media only screen and (max-width: 38em) {
   .achievement-box .box .text {
     font-size: 1.3rem;
   }
 }
+
 .achievement-box .box-2 {
-  margin-top: 0.2rem;
+  margin-top: .2rem;
 }
+
 .achievement-box .box-3 {
-  margin-top: 0.4rem;
+  margin-top: .4rem;
 }
+
 @media only screen and (max-width: 21em) {
   .achievement-box .box-3 {
     margin-top: 4rem;
@@ -182,24 +222,31 @@
 
 @-webkit-keyframes upanddown {
   0% {
-    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
   }
   50% {
-    transform: translateY(15%);
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
   }
   100% {
-    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
   }
 }
 
 @keyframes upanddown {
   0% {
-    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
   }
   50% {
-    transform: translateY(15%);
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
   }
   100% {
-    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
   }
-}/*# sourceMappingURL=Achievement.css.map */
+}
+/*# sourceMappingURL=Achievement.css.map */

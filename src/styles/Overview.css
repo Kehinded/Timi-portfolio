@@ -1,17 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap");
 :root {
   --home-primary-color-light: #73f3ed;
-  --home-primary-color-dark: #3aafa9;
+  --home-primary-color-dark:  #3aafa9;
   --home-secondary-color-light: #204755 ;
   --home-secondary-color-dark: #17252a;
 }
 
 .overview {
   margin: 5rem 1rem 3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0rem 3rem 3rem 3rem;
 }
+
 @media only screen and (max-width: 38em) {
   .overview {
     padding: 0rem 0rem 3rem 0rem;
@@ -22,55 +28,77 @@
   position: fixed;
   right: 10rem;
   top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 10;
 }
+
 @media only screen and (max-width: 44em) {
   .controls {
     right: 6rem;
     top: 13rem;
   }
 }
+
 @media only screen and (max-width: 30em) {
   .controls {
     right: 3rem;
   }
 }
+
 @media only screen and (max-width: 24em) {
   .controls {
     top: 10rem;
     right: 2rem;
   }
 }
+
 .controls .control-input {
   display: none;
 }
+
 .controls .control-input:checked ~ .controls-box .default-control {
   visibility: hidden;
 }
+
 .controls .control-input:checked ~ .controls-box .change-control {
   visibility: visible;
 }
+
 .controls .controls-box {
   cursor: pointer;
   background-color: var(--home-secondary-color-dark);
   width: 6rem;
   height: 2.5rem;
-  padding: 0.1rem 0.4rem;
-  box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4), -0.1rem -0.1rem 0.4rem rgba(255, 255, 255, 0.9);
+  padding: .1rem .4rem;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4), -0.1rem -0.1rem 0.4rem rgba(255, 255, 255, 0.9);
+          box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.4), -0.1rem -0.1rem 0.4rem rgba(255, 255, 255, 0.9);
   border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
+
 .controls .controls-box > * {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   background-color: var(--home-primary-color-dark);
 }
+
 .controls .controls-box > *:last-child {
   visibility: hidden;
-}/*# sourceMappingURL=Overview.css.map */
+}
+/*# sourceMappingURL=Overview.css.map */

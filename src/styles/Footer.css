@@ -1,106 +1,146 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,800&display=swap");
 :root {
   --home-primary-color-light: #73f3ed;
-  --home-primary-color-dark: #3aafa9;
+  --home-primary-color-dark:  #3aafa9;
   --home-secondary-color-light: #204755 ;
   --home-secondary-color-dark: #17252a;
 }
 
 .footer {
   background-color: var(--home-secondary-color-dark);
-  grid-column: full-start/full-end;
-  grid-row: 3/-1;
+  grid-column: full-start / full-end;
+  grid-row: 3 / -1;
   padding: 2rem 0rem 7rem 0rem;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .footer .text {
   text-align: center;
   text-transform: capitalize;
   font-size: 3rem;
   font-weight: bolder;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecf0f3), color-stop(40%, #ecf0f3), color-stop(60%, var(--home-secondary-color-dark)), color-stop(60%, var(--home-primary-color-dark)));
   background-image: linear-gradient(180deg, #ecf0f3 0%, #ecf0f3 40%, var(--home-secondary-color-dark) 60%, var(--home-primary-color-dark) 60%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+
 .footer .list {
   list-style: none;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 3rem;
   justify-items: center;
   margin: 3rem 0rem;
 }
+
 @media only screen and (max-width: 38em) {
   .footer .list {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
+
 .footer .list .item {
   position: relative;
 }
+
 .footer .list .item span {
   position: absolute;
   top: -150%;
   left: 50%;
   z-index: 200;
-  transform: translateX(-50%);
-  padding: 0.4rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: .4rem;
   color: #ffffff;
   width: 20rem;
   font-size: 1.4rem;
   font-weight: bold;
 }
+
 .footer .list .item .link {
   color: var(--home-primary-color-dark);
   text-decoration: none;
 }
+
 .footer .list .item .link:hover .icon {
-  transform: scale(2.5) translateY(-0.1rem);
+  -webkit-transform: scale(2.5) translateY(-0.1rem);
+          transform: scale(2.5) translateY(-0.1rem);
   color: #ffffff;
 }
+
 .footer .list .item .link:hover .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .footer .list .item .link .info {
   background-color: #ffffff;
-  box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--home-secondary-color-dark);
-  padding: 0.4rem;
+  padding: .4rem;
   position: absolute;
   bottom: -180%;
   left: 50%;
   z-index: 200;
   width: 15rem;
   font-weight: bold;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 1.2rem;
   text-transform: capitalize;
   display: none;
 }
+
 .footer .list .item .link .icon {
-  transform: scale(2);
-  transition: all 0.3s;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
+
 .footer .copy-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   font-weight: bolder;
   margin-bottom: 1rem;
 }
+
 .footer .copy-right .text-1 {
   margin-left: 1rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: .3rem;
 }
+
 .footer .copy-right .text-2 {
   margin-left: 1.5rem;
   color: var(--home-primary-color-light);
   word-spacing: 1rem;
-  letter-spacing: 0.3rem;
-}/*# sourceMappingURL=Footer.css.map */
+  letter-spacing: .3rem;
+}
+/*# sourceMappingURL=Footer.css.map */

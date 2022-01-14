@@ -1,1 +1,10 @@
-{"version":3,"sources":["../styles_reuse/Variables.scss","Layout.scss"],"names":[],"mappings":"AAAQ,sIAAA;AAGR;EAKI,mCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;ACLJ","file":"Layout.css"}
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,8HAAI;AAGZ,AAAA,KAAK,CAAC;EAKF,0BAA0B,CAAA,QAAC;EAC3B,yBAAyB,CAAA,SAAC;EAC1B,4BAA4B,CAAA,SAAC;EAC7B,2BAA2B,CAAA,QAAC;CAC7B",
+    "sources": [
+        "Layout.scss",
+        "../styles_reuse/Variables.scss"
+    ],
+    "names": [],
+    "file": "Layout.css"
+}
